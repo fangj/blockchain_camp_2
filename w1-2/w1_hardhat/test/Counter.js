@@ -7,6 +7,8 @@ const { ethers } = require("hardhat");
 
     async function init(){
         [owner,otherAccount]=await ethers.getSigners();
+        console.log("owner",owner.address);
+        console.log("otherAccount",otherAccount.address);
         const Counter = await ethers.getContractFactory("Counter");
         counter =await Counter.deploy();
         await counter.deployed();
