@@ -13,7 +13,6 @@ const PRIVATE_KEY_GANACHE_00 = process.env.PRIVATE_KEY_GANACHE_00
 
 const PRIVATE_KEY_MUMBAI_1=process.env.PRIVATE_KEY_MUMBAI_1
 
-
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
   solidity: "0.8.18",

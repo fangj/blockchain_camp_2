@@ -9,17 +9,24 @@ const hre = require("hardhat");
 async function main() {
 
 
-  const Lock = await hre.ethers.getContractFactory("MyERC20");
-  const lock = await Lock.deploy();
+  const MyERC20 = await hre.ethers.getContractFactory("MyERC20");
+  const myERC20 = await MyERC20.deploy();
 
-  await lock.deployed();
+  await myERC20.deployed();
 
   console.log(
-    `MyERC20 deployed to ${lock.address}`
+    `MyERC20 deployed to ${myERC20.address}`
+  );
+
+  const Vault = await hre.ethers.getContractFactory("Vault");
+  const vault = await Vault.deploy(myERC20.address);
+
+  await vault.deployed();
+
+  console.log(
+    `Vault deployed to ${vault.address}`
   );
 }
-//MyERC20 deployed to 0x91285bB114E75CF03acD1Fa216b1987B9c72dF49
-
 
 // We recommend this pattern to be able to use async/await everywhere
 // and properly handle errors.
