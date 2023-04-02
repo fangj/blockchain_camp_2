@@ -15,12 +15,18 @@ npx hardhat run scripts/deploy.js
 
 npx hardhat run scripts/deployMyERC20.js --network ganache
 
-MyERC20 deployed to 0xAfD4Aac7C52535c6de19F3b5EA0d6E742239aAc8
-Vault deployed to 0x085EA48B1620134779aDbB3a7F293Cf38797Bcb3
+MyERC20 deployed to 0xDAE721C0024ae402921F3DF227C6e06245F3D87F
+Vault deployed to 0xffa814BE989C0Fd3B2e36f27f761cB99D57D7781
 
 
 
 npx hardhat run scripts/deposit.js --network ganache
 bank approved
 bank deposited
-balance of 0xf62f3d4F89F7c47ed5D1439348738DEB74151896 is 9999580000000000000000
+balance of 0x2cD8c50FBb9DFb9AaaE9bdCEaBf33a72674Ad82c is 9999990000000000000000
+
+
+npm install --save-dev hardhat-abi-exporter
+
+npx hardhat export-abi
+ 

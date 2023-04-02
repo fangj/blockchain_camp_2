@@ -8,7 +8,7 @@ import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
 contract Vault {
     IERC20  immutable LELETOKEN;
-    mapping(address => uint) private accounts;
+    mapping(address => uint) public accounts;
 
     constructor(address token_address) {
         LELETOKEN = IERC20(token_address);
@@ -24,5 +24,11 @@ contract Vault {
         accounts[msg.sender] -= amount;
         LELETOKEN.transfer(msg.sender, amount);
     }
+
+    function deposited() external view returns (uint)  {
+        return accounts[msg.sender];
+    }
+
+
 
 }

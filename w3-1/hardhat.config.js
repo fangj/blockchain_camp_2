@@ -1,5 +1,5 @@
 require("@nomicfoundation/hardhat-toolbox");
-
+require('hardhat-abi-exporter');
 
 let dotenv = require('dotenv')
 dotenv.config({ path: "./.env" })
@@ -38,6 +38,16 @@ module.exports = {
       chainId: 80001,
     },
   },
+
+  abiExporter: {
+      path: './deployments/abi',
+      clear: true,
+      flat: true,
+      only: [],
+      spacing: 2,
+      pretty: true,
+  },
+
   etherscan: {
     apiKey: {
       goerli: 'your API key'
