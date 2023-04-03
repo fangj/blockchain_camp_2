@@ -30,3 +30,9 @@ npm install --save-dev hardhat-abi-exporter
 
 npx hardhat export-abi
  
+
+
+npx hardhat run .\scripts\transferMyERC721.js --network mumbai
+balance of 0xF823a9f55c4A3eeF3192311cbd5Ea8FE469a3Bc5 is 2
+transfered a token
+balance of 0xF823a9f55c4A3eeF3192311cbd5Ea8FE469a3Bc5 is 1

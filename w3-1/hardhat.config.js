@@ -12,6 +12,7 @@ const PRIVATE_KEY_GOERLI_1 = process.env.PRIVATE_KEY_GOERLI_1
 const PRIVATE_KEY_GANACHE_00 = process.env.PRIVATE_KEY_GANACHE_00
 
 const PRIVATE_KEY_MUMBAI_1=process.env.PRIVATE_KEY_MUMBAI_1
+const PRIVATE_KEY_MUMBAI_2=process.env.PRIVATE_KEY_MUMBAI_2
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
@@ -34,7 +35,7 @@ module.exports = {
     },
     mumbai: {
       url: "https://endpoints.omniatech.io/v1/matic/mumbai/public",
-      accounts:[PRIVATE_KEY_MUMBAI_1],
+      accounts:[PRIVATE_KEY_MUMBAI_1,PRIVATE_KEY_MUMBAI_2],
       chainId: 80001,
     },
   },
