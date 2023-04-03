@@ -35,25 +35,29 @@ module.exports = {
       chainId: 5,
     },
     mumbai: {
-      url: "https://endpoints.omniatech.io/v1/matic/mumbai/public",
+      // url: "https://endpoints.omniatech.io/v1/matic/mumbai/public",
+      url: "https://polygon-mumbai.blockpi.network/v1/rpc/public",
+      
       accounts:[PRIVATE_KEY_MUMBAI_1,PRIVATE_KEY_MUMBAI_2],
       chainId: 80001,
     },
   },
 
-  abiExporter: {
+  abiExporter:[{
       path: './deployments/abi',
       clear: true,
       flat: true,
       only: [],
       spacing: 2,
       pretty: true,
-  },
+  },{
+    path: './abi/minimal',
+    format: "minimal",
+    pretty: false,
+  }],
 
   etherscan: {
-    apiKey: {
-      goerli: 'your API key'
-    }
+    apiKey: 'HQBRR4IH1HIDWVAUEJCJWZN2A64Q9S3XHY'
   }
 };
 
