@@ -47,3 +47,6 @@ npx hardhat run .\scripts\transferMyERC721.js --network ganache
 balance of 0x3C92e4069752EE9F13405198999805252fF95290 is 1
 transfered a token
 balance of 0x3C92e4069752EE9F13405198999805252fF95290 is 0
+
+
+npx hardhat verify --contract contracts/MyERC20.sol:MyERC20 0x91285bB114E75CF03acD1Fa216b1987B9c72dF49 --network mumbai
