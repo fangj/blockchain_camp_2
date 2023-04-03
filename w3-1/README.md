@@ -36,3 +36,14 @@ npx hardhat run .\scripts\transferMyERC721.js --network mumbai
 balance of 0xF823a9f55c4A3eeF3192311cbd5Ea8FE469a3Bc5 is 2
 transfered a token
 balance of 0xF823a9f55c4A3eeF3192311cbd5Ea8FE469a3Bc5 is 1
+
+
+
+npx hardhat run .\scripts\deployMyERC721.js --network ganache
+MyERC721 deployed to 0x795D8065Fc6D76130cb8565487697AE2dD5Ab70a
+NFT mint
+
+npx hardhat run .\scripts\transferMyERC721.js --network ganache
+balance of 0x3C92e4069752EE9F13405198999805252fF95290 is 1
+transfered a token
+balance of 0x3C92e4069752EE9F13405198999805252fF95290 is 0

@@ -10,6 +10,7 @@ const PRIVATE_KEY_HARDHAT_02 = process.env.PRIVATE_KEY_HARDHAT_02
 
 const PRIVATE_KEY_GOERLI_1 = process.env.PRIVATE_KEY_GOERLI_1
 const PRIVATE_KEY_GANACHE_00 = process.env.PRIVATE_KEY_GANACHE_00
+const PRIVATE_KEY_GANACHE_01 = process.env.PRIVATE_KEY_GANACHE_01
 
 const PRIVATE_KEY_MUMBAI_1=process.env.PRIVATE_KEY_MUMBAI_1
 const PRIVATE_KEY_MUMBAI_2=process.env.PRIVATE_KEY_MUMBAI_2
@@ -25,7 +26,7 @@ module.exports = {
       },
     ganache: {
         url: "http://127.0.0.1:7545",
-        accounts: [PRIVATE_KEY_GANACHE_00],
+        accounts: [PRIVATE_KEY_GANACHE_00,PRIVATE_KEY_GANACHE_01],
         chainId: 1337,
       },
     goerli: {

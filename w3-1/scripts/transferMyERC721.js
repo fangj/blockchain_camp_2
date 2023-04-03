@@ -5,24 +5,22 @@ async function main() {
     //⽤户 A 调⽤ ERC20 的 Approve(Bank， 数量);
     //⽤户 A 调⽤ 合约 B 的 deposite(); 完成存款
 
-    const ERC721Address="0x2Df86a8b321fd4D54CA3Fa266C3E2dAF92b67E77";
+    const ERC721Address="0x795D8065Fc6D76130cb8565487697AE2dD5Ab70a";
 
     const MyERC721 = await hre.ethers.getContractAt("MyERC721",ERC721Address); 
 
     [account00,account01]=await ethers.getSigners();
 
-    const myERC721_01=MyERC721.connect(account01);
+    const myERC721_01=MyERC721.connect(account00);
 
-    const balance = await myERC721_01.balanceOf(account01.address);
-    console.log(`balance of ${account01.address} is ${balance}`);
+    const balance = await myERC721_01.balanceOf(account00.address);
+    console.log(`balance of ${account00.address} is ${balance}`);
 
-    console.log("myERC721_01",myERC721_01);
-    let tx=await myERC721_01.transferFrom(account01.address,account00.address,"0");
+    let tx=await myERC721_01.transferFrom(account00.address,account01.address,"0",{gasLimit: 2400000,gasPrice: ethers.utils.parseUnits('9.0', 'gwei')});
     console.log("transfered a token");
 
-    tx.await();
-    const balance2 = await myERC721_01.balanceOf(account01.address);
-    console.log(`balance of ${account01.address} is ${balance2}`);
+    const balance2 = await myERC721_01.balanceOf(account00.address);
+    console.log(`balance of ${account00.address} is ${balance2}`);
 
 
 }
